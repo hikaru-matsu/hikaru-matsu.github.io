@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang = "ja">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Portfolio</title>
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+        <head>
+            <nav>
+                <ul>
+                    <li><a href = "index.html">Top</a></li>
+                    <li><a href = "#about">About</a></li>
+                    <li><a href = "#topic">Topic</a></li>
+                    <li><a href = "#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class = "clear"></div>
+            <div class = "main-head">
+                <h1>My News</h1>
+                <img src = 'images/main-img.jpg' id = 'main-img'>
+            </div>
+        </head>
+        
+        <div id = "about"> 
+            <h2 class = "section-title"><span>About</span></h2>
+            <img src = "images/about.jpg">
+            <p>私は情報収集のスペシャリストです。みなさんの知りたいことや興味のある分野、様々な情報がここに詰まっています。<br>
+            ここの記事を読むことで、あなたの仕事の効率や経済的な不安を解消できます。毎日読むことをお勧めします。<br>
+            皆さんの生活が豊かになることを願っています。</p>
+        </div>
+        
+        <div id = "topic">
+            <h2 class = "section-title"><span>Topic</span></h2>
+            
+            <div class = "container">
+                <img src = "images/sample.png">
+                <p>samplesamplesample<br>samplesamplesample<br>samplesamplesample</p>
+            </div>
+            
+            <div class = "container">
+                <img src = "images/sample.png">
+                <p>samplesamplesample<br>samplesamplesample<br>samplesamplesample</p>
+            </div>
+            
+            <div class = "container">
+                <img src = "images/sample.png">
+                <p>samplesamplesample<br>samplesamplesample<br>samplesamplesample</p>
+            </div>
+        
+        </div>
+        
+        <div id = "contact">
+            <h2  class = "section-title"><span>Contact</span></h2>
+            <form>
+                <dl>
+                    <dt>お名前</dt>
+                    <dd><input type = "name"></dd>
+                    <dt>電話番号</dt>
+                    <dd><input type = "tel"></dd>
+                    <dt>メールアドレス</dt>
+                    <dd><input type = "email"></dd>
+                    <dt>お問い合わせ内容</dt>
+                    <dd><textarea></textarea></dd>
+                    <dd><button>送信</button></dd>
+                </dl>
+            </form>
+        </div>
+    
+        <footer>
+            <small>Infomation Life</small>
+        </footer>
+        
+        <script>
+            'use strict';
+             const Image = ['images/main-img.jpg', 'images/main-img2.png', 'images/main-img3.jpg', 'images/main-img4.jpg'];
+
+                let num = 0;
+
+                function slideshow() {
+                    if(num === 3) {
+                        num = 0;
+                    } else {
+                        num++;
+                    }
+                    document.getElementById('main-img').src = Image[num];
+                }   
+                setInterval(slideshow, 2000);
+        </script>
+        
+    </body>
+</html>
